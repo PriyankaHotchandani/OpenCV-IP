@@ -5,14 +5,14 @@ cap = cv2.VideoCapture(0)
 count = 0
 def count_frames(count):
         if count % 2 !=0:
-            cv2.imshow('flipped',flipVert)
+            cv2.imshow('flipped',flipHori)
         else:
             cv2.imshow('flipped',frame)
 
 
 while True:
     ret, frame = cap.read()
-    flipVert = cv2.flip(frame, 1)
+    flipHori = cv2.flip(frame, 1)
     count=count+1
 
     count_frames(count)
